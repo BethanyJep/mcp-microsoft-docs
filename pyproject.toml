@@ -1,0 +1,46 @@
+[project]
+name = "mcp-microsoft-docs"
+version = "0.1.0"
+description = "Creating an MCP implementation for Microsoft docs"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "bethanyjep"},
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=0.1.0",
+    "openai",
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "aiohttp>=3.9.0"
+] = "mcp-microsoft-docs"
+version = "0.1.0"
+description = "Creating an MCP implementation for Microsoft docs"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "bethanyjep"},
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=0.1.0",
+    "openai"
+]
+
+[build-system]
+requires = ["setuptools>61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/bethanyjep/mcp-microsoft-docs"
+Repository = "https://github.com/bethanyjep/mcp-microsoft-docs"
+Issues = "https://github.com/bethanyjep/mcp-microsoft-docs/issues"
+
+[project.scripts]
+mcp-server = "server:main"
+mcp-client = "client:main"
+
+[tool.setuptools]
+py-modules = ["server", "client", "mcp"]
+
